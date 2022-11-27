@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel = "stylesheet" href = "myCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "myScript.js"></script>
+
+</head>
+<body onload="initialize()">
+
+<canvas id="canvas" width="1300" height="650">
+</canvas>
+
+<button type="button" onclick="startAnimation()" id="startButton">Click To Start Game</button><br><br><br><br>
+<button onclick="switchToLevel2()"> Switch To Level 2</button>
+<button onclick="switchToLevel3()"> Switch To Level 3</button>
+
+
+<div class="container" id="idDD">
+    <img src="pictures/donaldDuck.png" alt="Snow" style="width:100px" style= "height:100px" >
+    <button type="button" onclick="pickDonaldDuck()" id="butPickDonald">Choose Donald</button>
+</div>
+
+<div class="container" id="idJB">
+    <img src="pictures/jeffBezos.png" alt="Snow" style="width:150px" style= "height:150px" >
+    <button type="button" onclick="pickJeffrey()" id="butJeffBezos">Choose Jeff Bezoz</button>
+</div>
+
+<div class="container" id="idPG">
+    <img src="pictures/peterGriffen.png" alt="Snow" style="width:130px" style= "height:130px" >
+    <button type="button" onclick="pickPeterGriffin()" id="butPeterGriffen">Choose Peter Griffen</button>
+</div>
+
+<div class="container" id="idAU">
+    <img src="pictures/blueAmongUs.png" alt="Snow" style="width:120px" style= "height:120px" >
+    <button type="button" onclick="pickAmongUs()" id="butAmongUs">Choose Among Us</button>
+</div>
+<!--<button type="button" onclick="pickDonaldDuck()" id="butPickDonald">Choose Donald</button>-->
+<!--<button type="button" onclick="pickJeffrey()" id="butJeffBezos">Choose Jeff Bezoz</button>-->
+<!--<button type="button" onclick="pickPeterGriffin()" id="butPeterGriffen">Choose Peter Griffen</button>-->
+<!--<button type="button" onclick="pickAmongUs()" id="butAmongUs">Choose Among Us</button>-->
+
+<!--//harsh stuff bellow-->
+<br><br><br><br>
+<div class = "inputingStuff">
+    <button type="button" onclick="submitQuestions()" id="subQuest">Click to add your questions</button>
+    <input id="inputQues">
+    <p id="dispQuest">Your questions are: </p>
+
+    <button type="button" onclick="submitAnswers()" id="subAns">Click to add your answers</button>
+    <input id="inputAns">
+    <p id="dispAnd">Your answers are: </p>
+</div>
+
+<br><br>
+<div class = "keypad">
+    <p>Type Final Combo</p>
+    <input type="text" id="finalCode">
+    <button id="enterFinal" onclick="finalCheck()">Submit</button>
+
+</div>
+<div>
+    <p id="fQuestion">First Question:</p>
+    <input type="text" id="fAnswer" value=""><br>
+    <button id="questionOneChecker" onclick="questionChecker()">Submit</button>
+    <p id="keypad1"></p>
+
+    <p id="sQuestion">Second Question:</p>
+    <input type="text" id="sAnswer" value=""><br>
+    <button id="questionTwoChecker" onclick="questionChecker()">Submit</button>
+    <p id="keypad2"></p>
+
+    <p id="tQuestion">Third Question:</p>
+    <input type="text" id="tAnswer" value=""><br>
+    <button id="questionThreeChecker" onclick="questionChecker()">Submit</button>
+    <p id="keypad3"></p>
+</div>
+
+</body>
+</html>
